@@ -1,0 +1,322 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Careers - Arshith Group</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="careers.css" />
+
+    <link rel="stylesheet" href="footer.css" />
+
+    <link rel="stylesheet" href="css/footer.css" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <div class="logo">Arshith Group</div>
+
+      <nav>
+        <ul class="nav-links">
+          <!-- HOME -->
+
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+
+          <!-- ABOUT -->
+
+          <li class="dropdown">
+            <div class="career-menu">
+              <a href="about.html">About</a>
+
+              <span class="dropdown-toggle">
+                <i class="fa-solid fa-chevron-down"></i>
+              </span>
+            </div>
+
+            <ul class="dropdown-menu">
+              <li>
+                <a href="about.html">About Company</a>
+              </li>
+
+              <li>
+                <a href="sustainability.html"> Sustainability & ESG </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- BUSINESS -->
+
+          <li class="dropdown">
+            <div class="career-menu">
+              <a href="business.html">Business</a>
+
+              <span class="dropdown-toggle">
+                <i class="fa-solid fa-chevron-down"></i>
+              </span>
+            </div>
+
+            <ul class="dropdown-menu">
+              <li>
+                <a href="business.html"> Business Solutions </a>
+              </li>
+
+              <li>
+                <a href="innovation-lab.html"> Innovation Lab </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- CAREERS -->
+
+          <li class="dropdown">
+            <div class="career-menu">
+              <a href="careers.html">Careers</a>
+
+              <span class="dropdown-toggle">
+                <i class="fa-solid fa-chevron-down"></i>
+              </span>
+            </div>
+
+            <ul class="dropdown-menu">
+              <li>
+                <a href="internship.html"> Internships </a>
+              </li>
+
+              <li>
+                <a href="employee-corner.html"> Employee Corner </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- NEWS -->
+
+          <li class="dropdown">
+            <div class="career-menu">
+              <a href="news.html">News</a>
+
+              <span class="dropdown-toggle">
+                <i class="fa-solid fa-chevron-down"></i>
+              </span>
+            </div>
+
+            <ul class="dropdown-menu">
+              <li>
+                <a href="news.html"> Latest News </a>
+              </li>
+
+              <li>
+                <a href="insights.html"> Insights </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- CONTACT -->
+
+          <li>
+            <a href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+
+    <section class="career-hero">
+      <video autoplay muted loop playsinline>
+        <source src="assets/videos/teamwork.mp4" type="video/mp4" />
+      </video>
+
+      <div class="career-overlay"></div>
+
+      <div class="career-content">
+        <span>JOIN OUR TEAM</span>
+
+        <h1>Build Your Future With Us</h1>
+
+        <p>
+          Work on real projects, gain industry experience and grow your career
+          with Arshith Group.
+        </p>
+      </div>
+    </section>
+    <section class="benefits-section">
+      <div class="section-title">
+        <span>WHY JOIN US</span>
+        <h1>Employee Benefits</h1>
+      </div>
+
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <h2>Career Growth</h2>
+          <p>
+            Continuous learning opportunities, mentorship programs and
+            leadership development.
+          </p>
+        </div>
+
+        <div class="benefit-card">
+          <h2>Innovation Culture</h2>
+          <p>
+            Work with modern technologies including AI, Cloud and Digital
+            Solutions.
+          </p>
+        </div>
+
+        <div class="benefit-card">
+          <h2>Flexible Environment</h2>
+          <p>Collaborative workplace encouraging creativity and innovation.</p>
+        </div>
+
+        <div class="benefit-card">
+          <h2>Recognition & Rewards</h2>
+          <p>Performance based rewards and employee appreciation programs.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERNSHIPS -->
+
+    <section class="career-section">
+      <div class="section-title">
+        <span>INTERNSHIPS</span>
+
+        <h1>Technical Internship Programs</h1>
+      </div>
+
+      <div class="internship-grid">
+        <!-- CARD 1 -->
+
+        <div class="intern-card">
+          <h2>Frontend Developer Intern</h2>
+
+          <p>
+            HTML, CSS, JavaScript, ReactJS internship program for students and
+            freshers.
+          </p>
+
+          <button onclick="openForm()">Apply Now</button>
+        </div>
+
+        <!-- CARD 2 -->
+
+        <div class="intern-card">
+          <h2>UI/UX Design Intern</h2>
+
+          <p>
+            Design modern interfaces using Figma and responsive web
+            technologies.
+          </p>
+
+          <button onclick="openForm()">Apply Now</button>
+        </div>
+
+        <!-- CARD 3 -->
+
+        <div class="intern-card">
+          <h2>React Developer Intern</h2>
+
+          <p>
+            Work on real world projects using React, APIs and frontend
+            technologies.
+          </p>
+
+          <button onclick="openForm()">Apply Now</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPLY FORM POPUP -->
+
+    <div class="popup-form" id="popup">
+      <div class="popup-box">
+        <span class="close-btn" onclick="closeForm()">×</span>
+
+        <h2>Internship Application</h2>
+
+        <form>
+          <input type="text" placeholder="Full Name" required />
+
+          <input type="email" placeholder="Email Address" required />
+
+          <input type="tel" placeholder="Phone Number" required />
+
+          <input type="file" required />
+
+          <button type="submit">Submit Application</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- TECHNICAL CONFIRMATION -->
+
+    <section class="career-section tech-section">
+      <div class="section-title">
+        <span>TECHNICAL CONFIRMATION</span>
+
+        <h1>Verification Form</h1>
+      </div>
+
+      <div class="tech-form">
+        <form>
+          <input type="text" placeholder="Full Name" required />
+
+          <input type="email" placeholder="Email Address" required />
+
+          <textarea placeholder="Educational Background"></textarea>
+
+          <button type="submit">Send Details</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ONLINE ASSESSMENT -->
+
+    <section class="assessment-section">
+      <div class="assessment-box">
+        <span>ONLINE TEST</span>
+
+        <h1>Technical Assessment Portal</h1>
+
+        <p>
+          Start your online technical evaluation and showcase your technical
+          skills.
+        </p>
+
+        <button>Start Assessment</button>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+
+    <div id="footer"></div>
+
+    <script>
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+    <script>
+      const dropdown = document.querySelector(".dropdown");
+      const toggle = document.querySelector(".dropdown-toggle");
+
+      toggle.addEventListener("click", () => {
+        dropdown.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>

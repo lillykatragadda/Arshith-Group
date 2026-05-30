@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Internship Details</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="internship-details.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- FOOTER CSS -->
+
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+      <div class="logo">Arshith Group</div>
+
+      <nav>
+        <ul class="nav-links">
+          <!-- HOME -->
+
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+
+          <!-- ABOUT -->
+
+          <li class="dropdown">
+            <div class="career-menu">
+              <a href="about.html">About</a>
+
+              <span class="dropdown-toggle">
+                <i class="fa-solid fa-chevron-down"></i>
+              </span>
+            </div>
+
+            <ul class="dropdown-menu">
+              <li>
+                <a href="about.html">About Company</a>
+              </li>
+
+              <li>
+                <a href="sustainability.html"> Sustainability & ESG </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- BUSINESS -->
+
+          <li class="dropdown">
+            <div class="career-menu">
+              <a href="business.html">Business</a>
+
+              <span class="dropdown-toggle">
+                <i class="fa-solid fa-chevron-down"></i>
+              </span>
+            </div>
+
+            <ul class="dropdown-menu">
+              <li>
+                <a href="business.html"> Business Solutions </a>
+              </li>
+
+              <li>
+                <a href="innovation-lab.html"> Innovation Lab </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- CAREERS -->
+
+          <li class="dropdown">
+            <div class="career-menu">
+              <a href="careers.html">Careers</a>
+
+              <span class="dropdown-toggle">
+                <i class="fa-solid fa-chevron-down"></i>
+              </span>
+            </div>
+
+            <ul class="dropdown-menu">
+              <li>
+                <a href="internship.html"> Internships </a>
+              </li>
+
+              <li>
+                <a href="employee-corner.html"> Employee Corner </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- NEWS -->
+
+          <li class="dropdown">
+            <div class="career-menu">
+              <a href="news.html">News</a>
+
+              <span class="dropdown-toggle">
+                <i class="fa-solid fa-chevron-down"></i>
+              </span>
+            </div>
+
+            <ul class="dropdown-menu">
+              <li>
+                <a href="news.html"> Latest News </a>
+              </li>
+
+              <li>
+                <a href="insights.html"> Insights </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- CONTACT -->
+
+          <li>
+            <a href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+
+    <section class="details-hero">
+      <div class="overlay"></div>
+
+      <div class="details-content">
+        <span>ARSHITH GROUP INTERNSHIPS</span>
+
+        <h1>Complete Internship Programs & Career Opportunities</h1>
+
+        <p>
+          Explore internship domains, mentorship programs, pricing plans,
+          placement opportunities, certifications and career support.
+        </p>
+      </div>
+    </section>
+
+    <!-- INTERNSHIP TYPES -->
+
+    <section class="internship-types">
+      <div class="section-title">
+        <span>OUR PROGRAMS</span>
+        <h1>Different Internship Programs</h1>
+      </div>
+
+      <div class="types-grid">
+        <div class="type-card">
+          <i class="fa-solid fa-code"></i>
+          <h2>Frontend Development</h2>
+          <p>
+            Learn HTML, CSS, JavaScript, React and responsive UI development.
+          </p>
+        </div>
+
+        <div class="type-card">
+          <i class="fa-solid fa-server"></i>
+          <h2>Backend Development</h2>
+          <p>
+            Learn Node.js, Express.js, APIs, databases and backend architecture.
+          </p>
+        </div>
+
+        <div class="type-card">
+          <i class="fa-solid fa-palette"></i>
+          <h2>UI/UX Design</h2>
+          <p>
+            Design user friendly interfaces using Figma and modern UI concepts.
+          </p>
+        </div>
+
+        <div class="type-card">
+          <i class="fa-solid fa-bullhorn"></i>
+          <h2>Digital Marketing</h2>
+          <p>Learn SEO, social media marketing and branding strategies.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+
+    <section class="pricing-section">
+      <div class="section-title">
+        <span>PRICING PLANS</span>
+        <h1>Choose Your Internship Plan</h1>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- BASIC PLAN -->
+
+        <div class="pricing-card">
+          <div class="plan-icon">
+            <i class="fa-solid fa-laptop-code"></i>
+          </div>
+
+          <h2>Basic Plan</h2>
+
+          <p>Perfect for beginners starting their internship journey.</p>
+
+          <div class="price">₹999</div>
+
+          <ul>
+            <li>✔ Recorded Sessions</li>
+            <li>✔ Certificate</li>
+            <li>✔ Basic Mentorship</li>
+            <li>✔ Assignments</li>
+          </ul>
+
+          <button type="button" onclick="scrollToApply(event)">
+            Enroll Now
+          </button>
+        </div>
+
+        <!-- PREMIUM PLAN -->
+
+        <div class="pricing-card featured">
+          <div class="plan-icon">
+            <i class="fa-solid fa-crown"></i>
+          </div>
+
+          <h2>Premium Plan</h2>
+
+          <p>Advanced internship with live mentorship and projects.</p>
+
+          <div class="price">₹2499</div>
+
+          <ul>
+            <li>✔ Live Training</li>
+            <li>✔ Industry Projects</li>
+            <li>✔ Placement Support</li>
+            <li>✔ Mock Interviews</li>
+            <li>✔ Premium Certification</li>
+          </ul>
+
+          <button type="button" onclick="scrollToApply(event)">
+            Enroll Now
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFITS -->
+
+    <section class="benefits-section">
+      <div class="section-title">
+        <span>WHY CHOOSE US</span>
+        <h1>Internship Benefits</h1>
+      </div>
+
+      <div class="benefits-grid">
+        <div class="benefit-box">
+          <i class="fa-solid fa-laptop-code"></i>
+          <h2>Real Time Projects</h2>
+        </div>
+
+        <div class="benefit-box">
+          <i class="fa-solid fa-users"></i>
+          <h2>Expert Mentorship</h2>
+        </div>
+
+        <div class="benefit-box">
+          <i class="fa-solid fa-award"></i>
+          <h2>Certification</h2>
+        </div>
+
+        <div class="benefit-box">
+          <i class="fa-solid fa-briefcase"></i>
+          <h2>Placement Support</h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENTORS -->
+
+    <section class="mentors-section">
+      <div class="section-title">
+        <span>OUR MENTORS</span>
+        <h1>Popular Internship Mentors</h1>
+      </div>
+
+      <div class="mentor-grid">
+        <div class="mentor-card">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" />
+          <h2>Rahul Sharma</h2>
+          <p>Senior Full Stack Developer</p>
+        </div>
+
+        <div class="mentor-card">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" />
+          <h2>Priya Reddy</h2>
+          <p>UI/UX Expert</p>
+        </div>
+
+        <div class="mentor-card">
+          <img src="https://randomuser.me/api/portraits/men/51.jpg" />
+          <h2>Arjun Verma</h2>
+          <p>Digital Marketing Strategist</p>
+        </div>
+      </div>
+    </section>
+    <!-- APPLY FORM SECTION -->
+
+    <section class="apply-section" id="apply-form">
+      <div class="section-title">
+        <span>APPLY NOW</span>
+        <h1>Apply For Internship</h1>
+      </div>
+
+      <div class="apply-container">
+        <!-- LEFT INFO -->
+
+        <div class="apply-info">
+          <h2>Start Your Career Journey With Us</h2>
+
+          <p>
+            Apply for our internship programs and gain real-world experience,
+            mentorship, certification and placement opportunities.
+          </p>
+
+          <div class="apply-points">
+            <div class="point">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Industry Level Projects</span>
+            </div>
+
+            <div class="point">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Internship Certificate</span>
+            </div>
+
+            <div class="point">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Placement Assistance</span>
+            </div>
+
+            <div class="point">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Expert Mentorship</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- FORM -->
+
+        <form class="apply-form">
+          <div class="input-box">
+            <input type="text" placeholder="Full Name" required />
+          </div>
+
+          <div class="input-box">
+            <input type="email" placeholder="Email Address" required />
+          </div>
+
+          <div class="input-box">
+            <input type="tel" placeholder="Phone Number" required />
+          </div>
+
+          <div class="input-box">
+            <select required>
+              <option value="">Select Internship Domain</option>
+              <option>Frontend Development</option>
+              <option>Backend Development</option>
+              <option>UI/UX Design</option>
+              <option>Digital Marketing</option>
+            </select>
+          </div>
+
+          <div class="input-box">
+            <input type="text" placeholder="College Name" required />
+          </div>
+
+          <div class="input-box">
+            <input type="text" placeholder="Current Qualification" required />
+          </div>
+
+          <div class="input-box full-width">
+            <textarea
+              rows="5"
+              placeholder="Why do you want this internship?"
+            ></textarea>
+          </div>
+
+          <!-- RESUME UPLOAD -->
+
+          <div class="upload-box full-width">
+            <label>
+              <i class="fa-solid fa-upload"></i>
+              Upload Resume
+            </label>
+
+            <input type="file" />
+          </div>
+
+          <button type="submit">Apply Internship</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- VERIFY -->
+
+    <section class="verify-section">
+      <div class="verify-box">
+        <span>INTERNSHIP VERIFICATION</span>
+
+        <h1>Verify Internship ID</h1>
+
+        <p>Enter your internship ID to verify internship details and status.</p>
+
+        <input type="text" placeholder="Enter Internship ID" id="internId" />
+
+        <button onclick="verifyInternship()">Verify Now</button>
+      </div>
+    </section>
+
+    <script>
+      function verifyInternship() {
+        const id = document.getElementById("internId").value;
+
+        if (id === "") {
+          alert("Please enter Internship ID");
+          return;
+        }
+
+        window.location.href = `verification.html?id=${id}`;
+      }
+    </script>
+    <!-- FOOTER -->
+    <div id="footer"></div>
+
+    <script>
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+    <script>
+      function scrollToApply(event) {
+        event.preventDefault();
+
+        const formSection = document.getElementById("apply-form");
+
+        formSection.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    </script>
+  </body>
+</html>

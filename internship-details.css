@@ -1,0 +1,2087 @@
+/* =========================================
+GOOGLE FONT
+========================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+/* =========================================
+GLOBAL
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(to bottom right, #f5f8f4, #eef7ff);
+  overflow-x: hidden;
+  position: relative;
+  color: #111827;
+}
+
+/* =========================================
+ANIMATED BACKGROUND
+========================================= */
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: -2;
+}
+
+/* GREEN BLOB */
+
+body::before {
+  width: 500px;
+  height: 500px;
+
+  background: radial-gradient(circle, rgba(34, 197, 94, 0.18), transparent 70%);
+
+  top: -150px;
+  left: -150px;
+
+  animation: greenBlob 12s infinite alternate ease-in-out;
+}
+
+/* BLUE BLOB */
+
+body::after {
+  width: 600px;
+  height: 600px;
+
+  background: radial-gradient(
+    circle,
+    rgba(59, 130, 246, 0.14),
+    transparent 70%
+  );
+
+  bottom: -200px;
+  right: -150px;
+
+  animation: blueBlob 15s infinite alternate ease-in-out;
+}
+
+@keyframes greenBlob {
+  100% {
+    transform: translate(100px, 60px) scale(1.2);
+  }
+}
+
+@keyframes blueBlob {
+  100% {
+    transform: translate(-80px, -40px) scale(1.15);
+  }
+}
+
+/* =========================================
+HERO SECTION
+========================================= */
+
+.details-hero {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* HERO BACKGROUND IMAGE */
+
+.details-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1400&auto=format&fit=crop");
+
+  background-size: cover;
+  background-position: center;
+
+  animation: heroZoom 18s infinite alternate ease-in-out;
+
+  z-index: -2;
+}
+
+@keyframes heroZoom {
+  100% {
+    transform: scale(1.08);
+  }
+}
+
+/* HERO OVERLAY */
+
+.overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.35),
+    rgba(0, 0, 0, 0.25)
+  );
+
+  z-index: -1;
+}
+
+/* HERO CONTENT */
+
+.details-content {
+  width: 85%;
+  max-width: 1000px;
+
+  text-align: center;
+  color: white;
+
+  animation:
+    heroFloat 5s infinite ease-in-out,
+    heroFade 1.5s ease;
+}
+
+@keyframes heroFade {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroFloat {
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.details-content span {
+  font-size: 18px;
+  letter-spacing: 6px;
+  color: white;
+}
+
+.details-content h1 {
+  font-size: 85px;
+  line-height: 1.1;
+  font-weight: 800;
+
+  margin-top: 25px;
+
+  color: white;
+
+  text-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+}
+
+.details-content p {
+  margin-top: 30px;
+
+  font-size: 24px;
+  line-height: 1.8;
+
+  color: rgba(255, 255, 255, 0.92);
+
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* =========================================
+COMMON SECTION
+========================================= */
+
+.internship-types,
+.pricing-section,
+.benefits-section,
+.mentors-section,
+.verify-section {
+  padding: 120px 8%;
+  position: relative;
+}
+
+/* =========================================
+SECTION TITLES
+========================================= */
+
+.section-title {
+  text-align: center;
+  margin-bottom: 70px;
+
+  animation: titleFloat 4s infinite ease-in-out;
+}
+
+@keyframes titleFloat {
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.section-title span {
+  color: #2f8c35;
+  font-size: 15px;
+  letter-spacing: 4px;
+  font-weight: 600;
+}
+
+.section-title h1 {
+  margin-top: 18px;
+
+  font-size: 60px;
+  font-weight: 800;
+
+  color: #111827;
+
+  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+.section-title h1::after {
+  content: "";
+
+  width: 120px;
+  height: 5px;
+
+  border-radius: 30px;
+
+  background: linear-gradient(to right, #22c55e, #2563eb);
+
+  display: block;
+
+  margin: 18px auto 0;
+
+  animation: lineMove 3s infinite alternate;
+}
+
+@keyframes lineMove {
+  100% {
+    width: 180px;
+  }
+}
+
+/* =========================================
+GRID
+========================================= */
+
+.types-grid,
+.pricing-grid,
+.benefits-grid,
+.mentor-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+  gap: 35px;
+}
+/* =========================================
+NEW PREMIUM CARD ANIMATIONS
+========================================= */
+
+.type-card,
+.pricing-card,
+.benefit-box,
+.mentor-card,
+.verify-box {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(18px);
+
+  border-radius: 35px;
+  padding: 45px;
+  text-align: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.6);
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.08),
+    0 25px 60px rgba(59, 130, 246, 0.06);
+
+  position: relative;
+  overflow: hidden;
+
+  transition:
+    transform 0.45s ease,
+    box-shadow 0.45s ease,
+    border-color 0.45s ease;
+
+  animation:
+    smoothReveal 1s ease,
+    gentleFloat 6s infinite ease-in-out;
+}
+
+/* DIFFERENT FLOAT DELAYS */
+
+.pricing-card:nth-child(2),
+.type-card:nth-child(2),
+.benefit-box:nth-child(2),
+.mentor-card:nth-child(2) {
+  animation-delay: 1.5s;
+}
+
+.pricing-card:nth-child(3),
+.type-card:nth-child(3),
+.benefit-box:nth-child(3) {
+  animation-delay: 3s;
+}
+
+/* ENTRY ANIMATION */
+
+@keyframes smoothReveal {
+  from {
+    opacity: 0;
+    transform: translateY(70px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* FLOATING EFFECT */
+
+@keyframes gentleFloat {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* GLOW BORDER EFFECT */
+
+.type-card::after,
+.pricing-card::after,
+.benefit-box::after,
+.mentor-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 35px;
+  padding: 1.5px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(34, 197, 94, 0.4),
+    rgba(37, 99, 235, 0.4)
+  );
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  opacity: 0;
+  transition: 0.4s ease;
+}
+
+/* HOVER EFFECT */
+
+.type-card:hover,
+.pricing-card:hover,
+.benefit-box:hover,
+.mentor-card:hover {
+  transform: translateY(-15px) scale(1.02);
+
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.12),
+    0 0 40px rgba(37, 99, 235, 0.15);
+
+  border-color: rgba(34, 197, 94, 0.25);
+
+  z-index: 10;
+}
+
+/* SHOW GLOW */
+
+.type-card:hover::after,
+.pricing-card:hover::after,
+.benefit-box:hover::after,
+.mentor-card:hover::after {
+  opacity: 1;
+}
+
+/* LIGHT SHINE EFFECT */
+
+.type-card::before,
+.pricing-card::before,
+.benefit-box::before,
+.mentor-card::before {
+  content: "";
+  position: absolute;
+
+  top: -100%;
+  left: -100%;
+
+  width: 250%;
+  height: 250%;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.18),
+    transparent
+  );
+
+  transform: rotate(25deg);
+
+  transition: 0.9s;
+}
+
+.type-card:hover::before,
+.pricing-card:hover::before,
+.benefit-box:hover::before,
+.mentor-card:hover::before {
+  left: 100%;
+  top: 100%;
+}
+/* =========================================
+ICONS
+========================================= */
+
+.type-card i,
+.benefit-box i {
+  font-size: 60px;
+
+  color: #22c55e;
+
+  filter: drop-shadow(0 0 20px rgba(34, 197, 94, 0.4));
+
+  animation: iconFloat 4s infinite ease-in-out;
+}
+
+@keyframes iconFloat {
+  50% {
+    transform: translateY(-10px) rotate(8deg);
+  }
+}
+
+/* =========================================
+CARD TEXT
+========================================= */
+
+.type-card h2,
+.benefit-box h2,
+.pricing-card h2,
+.mentor-card h2 {
+  margin-top: 25px;
+
+  font-size: 38px;
+  font-weight: 700;
+
+  color: #111827;
+}
+
+.type-card p,
+.pricing-card p,
+.benefit-box p,
+.mentor-card p {
+  margin-top: 18px;
+
+  font-size: 18px;
+  line-height: 1.9;
+
+  color: #4b5563;
+}
+
+/* =========================================
+PRICING
+========================================= */
+
+.price {
+  font-size: 60px;
+  font-weight: 800;
+
+  color: #22c55e;
+
+  margin: 30px 0;
+
+  text-shadow: 0 5px 20px rgba(34, 197, 94, 0.25);
+}
+
+.pricing-card ul {
+  list-style: none;
+  text-align: left;
+}
+
+.pricing-card ul li {
+  margin-bottom: 16px;
+  color: #374151;
+}
+
+.featured {
+  transform: scale(1.05);
+
+  border: 2px solid rgba(34, 197, 94, 0.3);
+}
+
+/* =========================================
+BUTTONS
+========================================= */
+
+button {
+  margin-top: 30px;
+
+  padding: 16px 40px;
+
+  border: none;
+  border-radius: 50px;
+
+  background: linear-gradient(135deg, #22c55e, #2563eb);
+
+  color: white;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  position: relative;
+  overflow: hidden;
+
+  transition: 0.5s;
+}
+
+button::before {
+  content: "";
+
+  position: absolute;
+
+  width: 120%;
+  height: 100%;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.5),
+    transparent
+  );
+
+  top: 0;
+  left: -120%;
+
+  transition: 0.8s;
+}
+
+button:hover::before {
+  left: 120%;
+}
+
+button:hover {
+  transform: translateY(-8px) scale(1.05);
+
+  box-shadow: 0 15px 35px rgba(37, 99, 235, 0.25);
+}
+
+/* =========================================
+MENTORS
+========================================= */
+
+.mentor-card img {
+  width: 130px;
+  height: 130px;
+
+  border-radius: 50%;
+  object-fit: cover;
+
+  border: 5px solid rgba(34, 197, 94, 0.15);
+
+  animation: mentorFloat 5s infinite ease-in-out;
+}
+
+@keyframes mentorFloat {
+  50% {
+    transform: translateY(-10px) rotate(4deg);
+  }
+}
+
+/* =========================================
+VERIFY SECTION
+========================================= */
+
+.verify-box {
+  max-width: 750px;
+  margin: auto;
+}
+
+.verify-box h1 {
+  font-size: 55px;
+  color: #111827;
+}
+
+.verify-box span {
+  color: #22c55e;
+  letter-spacing: 4px;
+  font-weight: 600;
+}
+
+.verify-box p {
+  margin-top: 20px;
+
+  font-size: 18px;
+  line-height: 1.8;
+
+  color: #4b5563;
+}
+
+.verify-box input {
+  width: 100%;
+
+  margin-top: 35px;
+
+  padding: 18px 20px;
+
+  border: none;
+  border-radius: 18px;
+
+  background: white;
+
+  font-size: 16px;
+
+  position: relative;
+  z-index: 10;
+
+  transition: 0.4s;
+}
+
+.verify-box input:focus {
+  outline: none;
+
+  transform: scale(1.02);
+
+  box-shadow: 0 10px 25px rgba(34, 197, 94, 0.18);
+}
+
+/* =========================================
+SCROLLBAR
+========================================= */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#22c55e, #2563eb);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background: #eef7ff;
+}
+
+/* =========================================
+RESPONSIVE
+========================================= */
+
+@media (max-width: 992px) {
+  .details-content h1 {
+    font-size: 52px;
+  }
+
+  .details-content p {
+    font-size: 18px;
+  }
+
+  .section-title h1 {
+    font-size: 42px;
+  }
+
+  .type-card h2,
+  .benefit-box h2,
+  .pricing-card h2,
+  .mentor-card h2 {
+    font-size: 30px;
+  }
+
+  .featured {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .details-hero {
+    height: 90vh;
+  }
+
+  .details-content h1 {
+    font-size: 40px;
+  }
+
+  .details-content span {
+    font-size: 14px;
+    letter-spacing: 3px;
+  }
+
+  .details-content p {
+    font-size: 16px;
+  }
+
+  .section-title h1 {
+    font-size: 34px;
+  }
+
+  .type-card,
+  .pricing-card,
+  .benefit-box,
+  .mentor-card,
+  .verify-box {
+    padding: 35px 25px;
+  }
+}
+/* NAVBAR */
+/* ===================================================
+NAVBAR
+=================================================== */
+.navbar {
+  width: 100%;
+  height: 82px;
+
+  background: rgba(255, 255, 255, 0.88);
+
+  backdrop-filter: blur(16px);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 8%;
+
+  position: fixed;
+  top: 0;
+
+  z-index: 1000;
+
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* LOGO */
+
+.logo {
+  font-size: 30px;
+  font-weight: 700;
+  color: #1565c0;
+
+  animation: logoFloat 4s ease-in-out infinite;
+}
+
+@keyframes logoFloat {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-3px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* NAV LINKS */
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 15px;
+  font-weight: 500;
+  transition: 0.4s ease;
+  position: relative;
+}
+
+/* UNDERLINE EFFECT */
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: #1565c0;
+  transition: 0.4s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: #1565c0;
+}
+
+/* DROPDOWN MENU */
+
+.dropdown {
+  position: relative;
+}
+
+/* CAREER MENU */
+
+.career-menu {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* DROPDOWN ICON */
+
+.dropdown-toggle {
+  font-size: 11px;
+  color: #1565c0;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.dropdown:hover .dropdown-toggle {
+  transform: rotate(180deg);
+}
+
+/* DROPDOWN BOX */
+
+.dropdown-menu {
+  position: absolute;
+
+  top: 45px;
+  left: 0;
+
+  min-width: 230px;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  backdrop-filter: blur(18px);
+
+  border-radius: 15px;
+
+  padding: 12px 0;
+
+  list-style: none;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(15px);
+
+  transition: 0.4s ease;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* SHOW DROPDOWN */
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+
+  transform: translateY(0);
+}
+
+/* DROPDOWN ITEMS */
+
+.dropdown-menu li {
+  width: 100%;
+}
+
+/* DROPDOWN LINKS */
+
+.dropdown-menu li a {
+  display: block;
+
+  padding: 14px 22px;
+
+  color: #333;
+
+  font-size: 14px;
+
+  transition: 0.4s;
+}
+
+/* REMOVE UNDERLINE */
+
+.dropdown-menu li a::after {
+  display: none;
+}
+
+/* HOVER EFFECT */
+
+.dropdown-menu li a:hover {
+  background: rgba(21, 101, 192, 0.08);
+
+  color: #1565c0;
+
+  padding-left: 28px;
+}
+
+/* PREMIUM GLOW EFFECT */
+
+.dropdown-menu::before {
+  content: "";
+
+  position: absolute;
+
+  width: 120px;
+  height: 120px;
+
+  background: rgba(21, 101, 192, 0.15);
+
+  border-radius: 50%;
+
+  filter: blur(60px);
+
+  top: -30px;
+  right: -30px;
+
+  z-index: -1;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 992px) {
+  .nav-links {
+    gap: 18px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+
+  .dropdown-menu {
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .nav-links {
+    gap: 14px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
+
+  .dropdown-menu {
+    min-width: 180px;
+  }
+}
+
+/* DROPDOWN */
+
+.career-menu {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+  font-size: 12px;
+  color: #333;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background: white;
+  min-width: 180px;
+  border-radius: 14px;
+  padding: 10px 0;
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: 0.4s;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu li {
+  padding: 10px 20px;
+}
+
+.dropdown-menu li a {
+  color: #333;
+  font-size: 14px;
+}
+
+.dropdown-menu li a:hover {
+  color: #2e7d32;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 992px) {
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .nav-links {
+    gap: 18px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+}
+/* CAREER DROPDOWN */
+
+.career-menu {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+/* FIXED DROPDOWN */
+
+.dropdown-menu {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  background: white;
+  min-width: 180px;
+  padding: 10px 0;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+
+  transition: 0.3s ease;
+}
+
+/* REMOVE BULLET */
+
+.dropdown-menu li {
+  list-style: none;
+}
+
+/* DROPDOWN LINKS */
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 20px;
+  color: #111;
+}
+
+.dropdown-menu li a:hover {
+  background: #f3f4f6;
+  color: #2563eb;
+}
+
+/* SHOW DROPDOWN */
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+/* =========================================
+PLAN ICONS
+========================================= */
+
+.plan-icon {
+  width: 90px;
+  height: 90px;
+
+  margin: 0 auto 25px;
+
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(135deg, #22c55e, #2563eb);
+
+  box-shadow:
+    0 10px 25px rgba(37, 99, 235, 0.2),
+    0 0 25px rgba(34, 197, 94, 0.25);
+
+  animation: iconPulse 4s infinite ease-in-out;
+}
+
+.plan-icon i {
+  font-size: 38px;
+  color: white;
+}
+
+/* ICON ANIMATION */
+
+@keyframes iconPulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.08);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* BETTER CARD SPACING */
+
+.pricing-card ul {
+  margin-top: 25px;
+}
+
+.pricing-card ul li {
+  margin-bottom: 18px;
+  font-size: 17px;
+  color: #374151;
+}
+
+/* BUTTON FIX */
+
+.pricing-card button {
+  margin-top: 30px;
+}
+/* =========================================
+SMOOTHER SECTION SPACING
+========================================= */
+
+.internship-types,
+.pricing-section,
+.benefits-section,
+.mentors-section,
+.verify-section {
+  padding: 90px 7%;
+}
+
+/* =========================================
+BETTER TITLES
+========================================= */
+
+.section-title {
+  margin-bottom: 55px;
+}
+
+.section-title span {
+  font-size: 13px;
+  letter-spacing: 3px;
+}
+
+.section-title h1 {
+  font-size: 44px;
+  line-height: 1.2;
+  margin-top: 12px;
+}
+
+/* =========================================
+SMALLER PROFESSIONAL CARDS
+========================================= */
+
+.type-card,
+.pricing-card,
+.benefit-box,
+.mentor-card {
+  padding: 35px 28px;
+  border-radius: 28px;
+
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+/* =========================================
+CARD TEXT SIZE FIX
+========================================= */
+
+.type-card h2,
+.pricing-card h2,
+.benefit-box h2,
+.mentor-card h2 {
+  font-size: 28px;
+  margin-top: 18px;
+}
+
+.type-card p,
+.pricing-card p,
+.benefit-box p,
+.mentor-card p {
+  font-size: 15px;
+  line-height: 1.7;
+  margin-top: 12px;
+}
+
+/* =========================================
+PRICE SIZE FIX
+========================================= */
+
+.price {
+  font-size: 48px;
+  margin: 22px 0;
+}
+
+/* =========================================
+LIST FIX
+========================================= */
+
+.pricing-card ul li {
+  font-size: 15px;
+  margin-bottom: 14px;
+}
+
+/* =========================================
+BUTTON FIX
+========================================= */
+
+button {
+  padding: 14px 34px;
+  font-size: 15px;
+}
+
+/* =========================================
+MODERN HOVER
+========================================= */
+
+.type-card:hover,
+.pricing-card:hover,
+.benefit-box:hover,
+.mentor-card:hover {
+  transform: translateY(-12px);
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.08),
+    0 0 25px rgba(37, 99, 235, 0.12);
+}
+
+/* =========================================
+SCROLL ANIMATIONS
+========================================= */
+
+.type-card,
+.pricing-card,
+.benefit-box,
+.mentor-card,
+.verify-box {
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+/* LEFT ANIMATION */
+
+.type-card:nth-child(odd),
+.benefit-box:nth-child(odd),
+.mentor-card:nth-child(odd) {
+  animation: slideLeft 1s ease forwards;
+}
+
+/* RIGHT ANIMATION */
+
+.type-card:nth-child(even),
+.benefit-box:nth-child(even),
+.mentor-card:nth-child(even) {
+  animation: slideRight 1s ease forwards;
+}
+
+/* PRICING CARDS */
+
+.pricing-card:nth-child(1) {
+  animation: slideBottom 1s ease forwards;
+}
+
+.pricing-card:nth-child(2) {
+  animation: slideTop 1s ease forwards;
+}
+
+/* DELAYS */
+
+.type-card:nth-child(2),
+.benefit-box:nth-child(2),
+.mentor-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.type-card:nth-child(3),
+.benefit-box:nth-child(3),
+.mentor-card:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.type-card:nth-child(4),
+.benefit-box:nth-child(4),
+.mentor-card:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+/* =========================================
+KEYFRAMES
+========================================= */
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-90px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(90px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideBottom {
+  from {
+    opacity: 0;
+    transform: translateY(90px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideTop {
+  from {
+    opacity: 0;
+    transform: translateY(-90px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================
+GRID FIX
+========================================= */
+
+.types-grid,
+.pricing-grid,
+.benefits-grid,
+.mentor-grid {
+  gap: 28px;
+}
+
+/* =========================================
+PREMIUM ICON SIZE FIX
+========================================= */
+
+.plan-icon {
+  width: 75px;
+  height: 75px;
+}
+
+.plan-icon i {
+  font-size: 28px;
+}
+
+/* =========================================
+MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+  .section-title h1 {
+    font-size: 32px;
+  }
+
+  .type-card h2,
+  .pricing-card h2,
+  .benefit-box h2,
+  .mentor-card h2 {
+    font-size: 24px;
+  }
+
+  .price {
+    font-size: 38px;
+  }
+
+  .type-card,
+  .pricing-card,
+  .benefit-box,
+  .mentor-card {
+    padding: 28px 22px;
+  }
+}
+/* =========================================
+HERO SECTION SIZE FIX
+========================================= */
+
+.details-hero {
+  height: 88vh;
+}
+
+/* SMALL TOP TEXT */
+
+.details-content span {
+  font-size: 14px;
+  letter-spacing: 6px;
+  font-weight: 500;
+}
+
+/* MAIN HERO HEADING */
+
+.details-content h1 {
+  font-size: 72px;
+  line-height: 1.08;
+
+  max-width: 1100px;
+
+  margin: 22px auto 0;
+
+  font-weight: 800;
+}
+
+/* HERO PARAGRAPH */
+
+.details-content p {
+  margin-top: 28px;
+
+  font-size: 20px;
+
+  line-height: 1.7;
+
+  max-width: 950px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* =========================================
+CARD SIZE FIX
+========================================= */
+
+.type-card,
+.pricing-card,
+.benefit-box,
+.mentor-card {
+  padding: 30px 24px;
+
+  border-radius: 24px;
+
+  min-height: auto;
+}
+
+/* CARD TITLE SIZE */
+
+.type-card h2,
+.pricing-card h2,
+.benefit-box h2,
+.mentor-card h2 {
+  font-size: 24px;
+  margin-top: 16px;
+}
+
+/* CARD PARAGRAPH */
+
+.type-card p,
+.pricing-card p,
+.benefit-box p,
+.mentor-card p {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* PRICING SIZE */
+
+.price {
+  font-size: 42px;
+}
+
+/* ICON SIZE */
+
+.type-card i,
+.benefit-box i {
+  font-size: 42px;
+}
+
+.plan-icon {
+  width: 70px;
+  height: 70px;
+}
+
+.plan-icon i {
+  font-size: 26px;
+}
+
+/* =========================================
+SECTION TITLE FIX
+========================================= */
+
+.section-title h1 {
+  font-size: 42px;
+}
+
+.section-title span {
+  font-size: 13px;
+}
+
+/* =========================================
+GRID SPACING FIX
+========================================= */
+
+.types-grid,
+.pricing-grid,
+.benefits-grid,
+.mentor-grid {
+  gap: 24px;
+}
+
+/* =========================================
+BUTTON FIX
+========================================= */
+
+button {
+  padding: 13px 28px;
+  font-size: 14px;
+}
+
+/* =========================================
+MENTOR IMAGE SIZE
+========================================= */
+
+.mentor-card img {
+  width: 100px;
+  height: 100px;
+}
+
+/* =========================================
+MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 992px) {
+  .details-content h1 {
+    font-size: 52px;
+  }
+
+  .details-content p {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 768px) {
+  .details-hero {
+    height: 85vh;
+  }
+
+  .details-content h1 {
+    font-size: 38px;
+    line-height: 1.2;
+  }
+
+  .details-content p {
+    font-size: 15px;
+  }
+
+  .section-title h1 {
+    font-size: 30px;
+  }
+
+  .type-card,
+  .pricing-card,
+  .benefit-box,
+  .mentor-card {
+    padding: 24px 18px;
+  }
+
+  .price {
+    font-size: 34px;
+  }
+}
+/* =========================================
+APPLY SECTION
+========================================= */
+
+.apply-section {
+  padding: 100px 7%;
+}
+
+.apply-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 40px;
+  align-items: center;
+}
+
+/* =========================================
+LEFT SIDE
+========================================= */
+
+.apply-info {
+  animation: slideLeft 1s ease;
+}
+
+.apply-info h2 {
+  font-size: 42px;
+  line-height: 1.3;
+
+  color: #111827;
+}
+
+.apply-info p {
+  margin-top: 20px;
+
+  font-size: 16px;
+  line-height: 1.8;
+
+  color: #4b5563;
+}
+
+.apply-points {
+  margin-top: 35px;
+}
+
+.point {
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  margin-bottom: 22px;
+}
+
+.point i {
+  color: #22c55e;
+  font-size: 22px;
+}
+
+.point span {
+  font-size: 17px;
+  color: #111827;
+}
+
+/* =========================================
+FORM
+========================================= */
+
+.apply-form {
+  background: rgba(255, 255, 255, 0.75);
+
+  backdrop-filter: blur(15px);
+
+  padding: 40px;
+
+  border-radius: 30px;
+
+  border: 1px solid rgba(255, 255, 255, 0.6);
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.06),
+    0 0 20px rgba(37, 99, 235, 0.08);
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 20px;
+
+  animation: slideRight 1s ease;
+}
+
+/* INPUTS */
+
+.input-box input,
+.input-box select,
+.input-box textarea {
+  width: 100%;
+
+  padding: 16px 18px;
+
+  border: none;
+  outline: none;
+
+  border-radius: 16px;
+
+  background: #f9fafb;
+
+  font-size: 15px;
+
+  transition: 0.3s;
+}
+
+.input-box input:focus,
+.input-box select:focus,
+.input-box textarea:focus {
+  background: white;
+
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+/* FULL WIDTH */
+
+.full-width {
+  grid-column: span 2;
+}
+
+/* TEXTAREA */
+
+textarea {
+  resize: none;
+}
+
+/* UPLOAD */
+
+.upload-box {
+  background: #f9fafb;
+
+  padding: 18px;
+
+  border-radius: 18px;
+
+  text-align: center;
+
+  border: 2px dashed rgba(37, 99, 235, 0.2);
+}
+
+.upload-box label {
+  display: block;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  color: #2563eb;
+
+  cursor: pointer;
+}
+
+.upload-box i {
+  margin-right: 10px;
+}
+
+.upload-box input {
+  margin-top: 10px;
+}
+
+/* BUTTON */
+
+.apply-form button {
+  grid-column: span 2;
+
+  width: 100%;
+}
+
+/* =========================================
+RESPONSIVE
+========================================= */
+
+@media (max-width: 992px) {
+  .apply-container {
+    grid-template-columns: 1fr;
+  }
+
+  .apply-info h2 {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 768px) {
+  .apply-form {
+    grid-template-columns: 1fr;
+
+    padding: 28px 22px;
+  }
+
+  .full-width {
+    grid-column: span 1;
+  }
+
+  .apply-form button {
+    grid-column: span 1;
+  }
+
+  .apply-info h2 {
+    font-size: 28px;
+  }
+}
+/* FIX BUTTON CLICK ISSUE */
+
+.pricing-card {
+  position: relative;
+  z-index: 1;
+}
+
+.pricing-card button {
+  position: relative;
+  z-index: 20;
+  cursor: pointer;
+}
+
+/* REMOVE OVERLAY BLOCKING */
+
+.pricing-card::before,
+.pricing-card::after {
+  pointer-events: none;
+}
+/* ==================================================
+DARK PREMIUM THEME OVERRIDE
+================================================== */
+
+body {
+  background: #050505 !important;
+  color: #fff !important;
+}
+
+/* BACKGROUND GLOW */
+
+body::before {
+  background: radial-gradient(
+    circle,
+    rgba(212, 170, 90, 0.1),
+    transparent 70%
+  ) !important;
+}
+
+body::after {
+  background: radial-gradient(
+    circle,
+    rgba(0, 119, 255, 0.08),
+    transparent 70%
+  ) !important;
+}
+
+/* NAVBAR */
+
+.navbar {
+  background: #050505 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+}
+
+.logo {
+  color: #fff !important;
+}
+
+.nav-links a {
+  color: #fff !important;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  color: #d4aa5a !important;
+}
+
+.dropdown-toggle {
+  color: #d4aa5a !important;
+}
+
+.dropdown-menu {
+  background: #111 !important;
+  border: 1px solid rgba(212, 170, 90, 0.25);
+}
+
+.dropdown-menu li a {
+  color: #fff !important;
+}
+
+.dropdown-menu li a:hover {
+  color: #d4aa5a !important;
+  background: rgba(212, 170, 90, 0.08) !important;
+}
+
+/* HERO */
+
+.details-hero::before {
+  filter: brightness(0.35);
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.55) !important;
+}
+
+.details-content span {
+  color: #d4aa5a !important;
+}
+
+.details-content h1 {
+  color: #fff !important;
+}
+
+.details-content p {
+  color: #ddd !important;
+}
+
+/* SECTION TITLES */
+
+.section-title span {
+  color: #d4aa5a !important;
+}
+
+.section-title h1 {
+  color: #fff !important;
+}
+
+.section-title h1::after {
+  background: #d4aa5a !important;
+}
+
+/* ALL CARDS */
+
+.type-card,
+.pricing-card,
+.benefit-box,
+.mentor-card,
+.verify-box,
+.apply-form {
+  background: #101010 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: none !important;
+}
+
+/* TEXT */
+
+.type-card h2,
+.pricing-card h2,
+.benefit-box h2,
+.mentor-card h2,
+.verify-box h1,
+.apply-info h2 {
+  color: #fff !important;
+}
+
+.type-card p,
+.pricing-card p,
+.mentor-card p,
+.verify-box p,
+.apply-info p {
+  color: #cfcfcf !important;
+}
+
+/* ICONS */
+
+.type-card i,
+.benefit-box i {
+  color: #d4aa5a !important;
+}
+
+.plan-icon {
+  background: #d4aa5a !important;
+}
+
+.plan-icon i {
+  color: #111 !important;
+}
+
+/* PRICE */
+
+.price {
+  color: #d4aa5a !important;
+}
+
+/* LIST */
+
+.pricing-card ul li {
+  color: #ddd !important;
+}
+
+/* APPLY SECTION */
+
+.apply-info .point span {
+  color: #fff !important;
+}
+
+.point i {
+  color: #d4aa5a !important;
+}
+
+/* FORM */
+
+.input-box input,
+.input-box select,
+.input-box textarea {
+  background: #1a1a1a !important;
+  color: #fff !important;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.input-box input::placeholder,
+textarea::placeholder {
+  color: #999;
+}
+
+.upload-box {
+  background: #1a1a1a !important;
+  border: 1px dashed rgba(212, 170, 90, 0.3);
+}
+
+.upload-box label {
+  color: #d4aa5a !important;
+}
+
+/* BUTTONS */
+
+button {
+  background: #d4aa5a !important;
+  color: #111 !important;
+  font-weight: 700;
+}
+
+/* VERIFY INPUT */
+
+.verify-box input {
+  background: #1a1a1a !important;
+  color: #fff !important;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* HOVER */
+
+.type-card:hover,
+.pricing-card:hover,
+.benefit-box:hover,
+.mentor-card:hover {
+  border-color: #d4aa5a !important;
+  box-shadow: 0 15px 45px rgba(212, 170, 90, 0.15) !important;
+}
