@@ -192,10 +192,9 @@ body {
   top: 50%;
   left: 8%;
   transform: translateY(-50%);
-
   z-index: 10;
 
-  max-width: 850px;
+  max-width: 700px;
 }
 
 .hero-content span {
@@ -211,23 +210,20 @@ body {
 }
 
 .hero-content h1 {
-  font-size: 6.5rem;
-  line-height: 0.95;
-
+  font-size: clamp(4rem, 7vw, 6.5rem);
+  line-height: 1.05;
   font-family: "Playfair Display", serif;
-
-  margin-bottom: 28px;
-
+  margin-bottom: 25px;
   color: #fff;
-
   text-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+
+  word-break: keep-all;
 }
 
 .hero-content h1 span {
   display: block;
-  color: #d4aa5a;
+  color: #fff;
 }
-
 .hero-content p {
   font-size: 1.25rem;
   line-height: 2;
