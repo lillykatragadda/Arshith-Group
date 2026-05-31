@@ -49,3 +49,17 @@
     text-decoration: none;
   }
 }
+@media (max-width: 992px) {
+  .navbar {
+    background: #111 !important;
+    height: 80px;
+  }
+
+  .logo {
+    color: #fff;
+  }
+
+  .menu-toggle {
+    color: #d4aa5a;
+  }
+}
