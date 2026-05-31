@@ -1211,3 +1211,74 @@ body::after {
     font-size: 40px;
   }
 }
+.trending-grid {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.trend-card {
+  width: 100%;
+
+  min-height: 280px;
+
+  background: #0b0b0b !important;
+
+  border-radius: 32px;
+
+  border: 1px solid rgba(212, 175, 55, 0.12);
+
+  padding: 60px 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: relative;
+
+  overflow: hidden;
+
+  transition: 0.4s;
+}
+.trend-content {
+  max-width: 700px;
+}
+
+.trend-content h2 {
+  font-size: 42px;
+  color: #fff;
+  margin-bottom: 18px;
+}
+
+.trend-content p {
+  color: #cfcfcf;
+  line-height: 1.9;
+  font-size: 18px;
+}
+
+.trend-btn {
+  border: 1px solid #d4af37;
+  color: #d4af37;
+  text-decoration: none;
+
+  padding: 16px 34px;
+  border-radius: 50px;
+
+  transition: 0.4s;
+}
+
+.trend-btn:hover {
+  background: #d4af37;
+  color: #111;
+}
+.trending-section {
+  padding-top: 40px;
+}
+
+.trending-grid {
+  width: 92%;
+  max-width: 1550px;
+  margin: auto;
+}
