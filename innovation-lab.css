@@ -1198,3 +1198,128 @@ span {
     url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2000")
       center center/cover no-repeat !important;
 }
+/* PREMIUM SUBMISSION SECTION */
+
+.submission-section {
+  padding: 120px 8%;
+  background: #050505;
+}
+
+.submission-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.submission-left h2 {
+  font-size: 4rem;
+  color: #fff;
+  margin-bottom: 25px;
+  line-height: 1.1;
+}
+
+.submission-left p {
+  color: #d5d5d5;
+  font-size: 18px;
+  line-height: 1.9;
+  margin-bottom: 40px;
+}
+
+.reward-box {
+  background: #0f0f0f;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
+  padding: 25px;
+  margin-bottom: 20px;
+}
+
+.reward-box h4 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.reward-box p {
+  margin: 0;
+  color: #bdbdbd;
+}
+
+.submission-form {
+  background: rgba(15, 15, 15, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 30px;
+  padding: 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.submission-form::before {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: rgba(0, 255, 100, 0.05);
+  border-radius: 50%;
+  top: -100px;
+  right: -100px;
+}
+
+.submission-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.submission-form input,
+.submission-form select,
+.submission-form textarea {
+  width: 100%;
+  background: #161616;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: white;
+  padding: 18px 22px;
+  border-radius: 18px;
+  font-size: 15px;
+}
+
+.submission-form textarea {
+  min-height: 130px;
+  resize: none;
+}
+
+.submission-form input:focus,
+.submission-form select:focus,
+.submission-form textarea:focus {
+  border-color: #d4aa5a;
+  box-shadow: 0 0 20px rgba(212, 170, 90, 0.15);
+}
+
+.submit-btn {
+  background: #d4aa5a;
+  color: #111;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  border-radius: 50px;
+  height: 65px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.submit-btn:hover {
+  transform: translateY(-5px);
+}
+
+@media (max-width: 992px) {
+  .submission-container {
+    grid-template-columns: 1fr;
+  }
+
+  .submission-left h2 {
+    font-size: 3rem;
+  }
+
+  .submission-form {
+    padding: 30px;
+  }
+}
