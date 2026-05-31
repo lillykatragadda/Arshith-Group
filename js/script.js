@@ -32,28 +32,6 @@ AOS.init({
 */
 
 // ======================================================
-// NAVBAR SCROLL EFFECT
-// ======================================================
-
-window.addEventListener("scroll", () => {
-  const navbar = document.querySelector(".navbar");
-
-  if (window.scrollY > 50) {
-    navbar.style.padding = "14px 7%";
-
-    navbar.style.boxShadow = "0 10px 30px rgba(0,0,0,0.08)";
-
-    navbar.style.background = "rgba(255,255,255,0.92)";
-  } else {
-    navbar.style.padding = "18px 7%";
-
-    navbar.style.boxShadow = "none";
-
-    navbar.style.background = "rgba(65, 17, 17, 0.8)";
-  }
-});
-
-// ======================================================
 // IMPACT MARQUEE PAUSE ON HOVER
 // ======================================================
 
@@ -115,11 +93,11 @@ if (menuToggle && navLinks) {
 window.addEventListener("scroll", () => {
   const navbar = document.querySelector(".navbar");
 
+  navbar.style.background = "#111";
+
   if (window.scrollY > 50) {
-    navbar.style.background = "#111";
-    navbar.style.boxShadow = "0 10px 30px rgba(0,0,0,0.2)";
+    navbar.style.boxShadow = "0 10px 25px rgba(0,0,0,0.25)";
   } else {
-    navbar.style.background = "#111";
     navbar.style.boxShadow = "none";
   }
 });
