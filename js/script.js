@@ -1,22 +1,7 @@
-/*
-const swiper = new Swiper(".heroSwiper", {
-  loop: true,
-  speed: 1200,
-  effect: "fade",
-  autoplay: {
-    delay: 4000,
-    disableOnInteraction: false,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-});
-*/
 // ======================================================
 // HERO SWIPER
 // ======================================================
-
+/*
 const swiper = new Swiper(".heroSwiper", {
   loop: true,
 
@@ -33,7 +18,7 @@ const swiper = new Swiper(".heroSwiper", {
     el: ".swiper-pagination",
     clickable: true,
   },
-});
+});*/
 
 // ======================================================
 // AOS ANIMATIONS
@@ -120,10 +105,15 @@ function showDivision(id) {
   document.getElementById(id).classList.add("active");
 }
 const menuToggle = document.querySelector(".menu-toggle");
+
+console.log("menu found", menuToggle);
+
 const nav = document.querySelector("nav");
 
 if (menuToggle) {
   menuToggle.addEventListener("click", () => {
+    console.log("clicked");
+
     nav.classList.toggle("active");
   });
 }
