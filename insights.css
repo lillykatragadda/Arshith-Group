@@ -238,10 +238,6 @@ section {
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
 }
 
-.article-card:first-child {
-  grid-row: span 2;
-}
-
 .article-card:hover {
   transform: translateY(-12px);
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.14);
@@ -757,4 +753,51 @@ INDUSTRIES SHOWCASE
   .industry-panel:hover {
     flex: 1;
   }
+}
+/* EQUAL HEIGHT ARTICLE CARDS */
+
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 40px;
+  align-items: stretch;
+}
+
+.article-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 760px;
+}
+
+.article-image {
+  height: 330px !important;
+  flex-shrink: 0;
+}
+
+.article-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
+
+.article-content h3 {
+  min-height: 180px;
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+.article-content p {
+  min-height: 140px;
+  line-height: 1.9;
+}
+
+.article-content button {
+  margin-top: auto;
+  width: 180px;
+  height: 60px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
 }
