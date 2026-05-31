@@ -1,3 +1,18 @@
+/*
+const swiper = new Swiper(".heroSwiper", {
+  loop: true,
+  speed: 1200,
+  effect: "fade",
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+*/
 // ======================================================
 // HERO SWIPER
 // ======================================================
@@ -23,12 +38,13 @@ const swiper = new Swiper(".heroSwiper", {
 // ======================================================
 // AOS ANIMATIONS
 // ======================================================
-
+/*
 AOS.init({
   duration: 1200,
   once: true,
   offset: 120,
 });
+*/
 
 // ======================================================
 // NAVBAR SCROLL EFFECT
