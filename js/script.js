@@ -49,7 +49,7 @@ window.addEventListener("scroll", () => {
 
     navbar.style.boxShadow = "none";
 
-    navbar.style.background = "rgba(255,255,255,0.8)";
+    navbar.style.background = "rgba(65, 17, 17, 0.8)";
   }
 });
 
@@ -105,15 +105,10 @@ function showDivision(id) {
   document.getElementById(id).classList.add("active");
 }
 const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
 
-console.log("menu found", menuToggle);
-
-const nav = document.querySelector("nav");
-
-if (menuToggle) {
+if (menuToggle && navLinks) {
   menuToggle.addEventListener("click", () => {
-    console.log("clicked");
-
-    nav.classList.toggle("active");
+    navLinks.classList.toggle("active");
   });
 }
