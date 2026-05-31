@@ -542,13 +542,10 @@ body {
     padding: 0 25px;
   }
 
-  .nav-links {
-    display: none;
-  }
-
   .logo {
     font-size: 2rem;
   }
+}
 
   .hero-content {
     left: 6%;

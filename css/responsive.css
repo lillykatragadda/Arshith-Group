@@ -1,56 +1,33 @@
-/* ==================================
-RESPONSIVE.CSS
-================================== */
-
-html,
-body {
-  overflow-x: hidden;
-}
-
-/* Hide hamburger on desktop */
-
 .menu-toggle {
   display: none;
 }
 
-/* ==================================
-MOBILE NAVBAR
-================================== */
-
-@media (max-width: 768px) {
-  .navbar {
-    padding: 15px 20px !important;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .logo {
-    font-size: 24px !important;
-  }
-
+@media (max-width: 992px) {
   .menu-toggle {
     display: block;
-    font-size: 28px;
+    font-size: 30px;
     color: #d4aa5a;
     cursor: pointer;
+    z-index: 99999;
   }
 
   .nav-links {
-    position: fixed;
+    position: fixed !important;
 
-    top: 75px;
+    top: 95px;
     right: -100%;
 
     width: 280px;
+
     height: 100vh;
 
     background: #111;
 
-    display: flex;
+    display: flex !important;
+
     flex-direction: column;
 
-    padding: 40px 25px;
+    padding: 30px;
 
     gap: 20px;
 
@@ -64,13 +41,11 @@ MOBILE NAVBAR
   }
 
   .nav-links li {
-    width: 100%;
     list-style: none;
   }
 
   .nav-links a {
     color: white;
     text-decoration: none;
-    font-size: 16px;
   }
 }
