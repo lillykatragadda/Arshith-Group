@@ -472,3 +472,130 @@ section:last-of-type {
   width: 70%;
   margin: auto;
 }
+/* =====================================
+   MOBILE FOOTER FIX
+   ===================================== */
+
+@media screen and (max-width: 768px) {
+  .footer-hero {
+    width: 100% !important;
+    height: 140px !important;
+    margin: 0 !important;
+  }
+
+  .hero-text {
+    font-size: 32px !important;
+    letter-spacing: 4px !important;
+    text-align: center;
+  }
+
+  .footer-content {
+    width: 92% !important;
+    grid-template-columns: 1fr !important;
+    gap: 35px !important;
+    padding: 40px 0 !important;
+  }
+
+  .left-column {
+    max-width: 100%;
+  }
+
+  .brand-logo {
+    font-size: 28px !important;
+    letter-spacing: 2px !important;
+  }
+
+  .company-desc {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .footer-column {
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    padding-top: 20px;
+  }
+
+  .footer-column h3 {
+    font-size: 22px !important;
+    margin-bottom: 18px !important;
+  }
+
+  .footer-column a {
+    margin-bottom: 14px;
+    font-size: 14px;
+  }
+
+  .newsletter-box {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    border-bottom: none;
+  }
+
+  .newsletter-box input {
+    width: 100%;
+    border-bottom: 1px solid #999;
+    padding-bottom: 10px;
+  }
+
+  .newsletter-box button {
+    background: #111;
+    color: #fff;
+    padding: 10px 18px;
+    letter-spacing: 2px;
+  }
+
+  .bottom-social {
+    justify-content: flex-start;
+    margin-top: 20px;
+  }
+
+  .footer-bottom {
+    width: 92% !important;
+    padding-bottom: 90px !important;
+  }
+
+  .footer-bottom p {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .global-company {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .whatsapp-btn {
+    width: 52px !important;
+    height: 52px !important;
+    right: 15px !important;
+    bottom: 15px !important;
+    font-size: 26px !important;
+  }
+}
+
+/* EXTRA SMALL DEVICES */
+
+@media screen and (max-width: 480px) {
+  .hero-text {
+    font-size: 24px !important;
+    letter-spacing: 2px !important;
+  }
+
+  .brand-logo {
+    font-size: 24px !important;
+  }
+
+  .footer-column h3 {
+    font-size: 20px !important;
+  }
+
+  .footer-content {
+    width: 90% !important;
+  }
+
+  .footer-bottom {
+    width: 90% !important;
+  }
+}
