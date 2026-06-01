@@ -101,3 +101,11 @@ window.addEventListener("scroll", () => {
     navbar.style.boxShadow = "none";
   }
 });
+document.querySelectorAll(".dropdown-toggle").forEach((toggle) => {
+  toggle.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    toggle.closest(".dropdown").classList.toggle("active");
+  });
+});
