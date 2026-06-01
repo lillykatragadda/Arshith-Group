@@ -688,9 +688,9 @@ body {
 }.industry-grid {
   display: grid;
 
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 
-  gap: 25px;
+  gap: 30px;
 
   margin-top: 70px;
 }
@@ -738,4 +738,149 @@ body {
 .industry-card p {
   color: #cfcfcf;
   line-height: 1.8;
+}
+/* ===================================
+   ABOUT PAGE MOBILE RESPONSIVE FIX
+   =================================== */
+
+@media screen and (max-width: 992px) {
+
+  body,
+  html {
+    overflow-x: hidden;
+  }
+
+  /* HERO */
+
+  .hero {
+    min-height: 100vh;
+  }
+
+  .hero-content {
+    left: 25px !important;
+    right: 25px;
+    max-width: calc(100% - 50px);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .hero-content h1 {
+    font-size: 3rem !important;
+    line-height: 1.15;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .hero-buttons a {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* COMPANY */
+
+  .company-section {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 80px 25px;
+  }
+
+  .company-content h2 {
+    font-size: 2.8rem;
+  }
+
+  .company-image img {
+    height: 350px;
+  }
+
+  /* SECTION TITLES */
+
+  .section-title h2 {
+    font-size: 2.8rem;
+  }
+
+  /* LEADERS */
+
+  .leaders-section {
+    padding: 80px 25px;
+  }
+
+  .leader-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .leader-card img {
+    width: 170px;
+    height: 170px;
+  }
+
+  .leader-info h3 {
+    font-size: 2rem;
+  }
+
+  .leader-info p {
+    font-size: 0.95rem;
+  }
+
+  /* INDUSTRIES */
+
+  .industry-section {
+    padding: 80px 25px;
+  }
+
+  .industry-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+
+  .industry-card {
+    min-height: auto;
+    padding: 30px 25px;
+  }
+
+  .industry-card h3 {
+    font-size: 1.6rem;
+  }
+
+  .industry-card p {
+    font-size: 0.95rem;
+  }
+}
+
+/* SMALL PHONES */
+
+@media screen and (max-width: 576px) {
+
+  .logo {
+    font-size: 1.6rem !important;
+  }
+
+  .hero-content h1 {
+    font-size: 2.4rem !important;
+  }
+
+  .company-content h2,
+  .section-title h2 {
+    font-size: 2.2rem !important;
+  }
+
+  .hero-content span {
+    letter-spacing: 4px;
+    font-size: 12px;
+  }
+
+  .leader-card img {
+    width: 140px;
+    height: 140px;
+  }
 }

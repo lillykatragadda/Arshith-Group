@@ -1149,3 +1149,196 @@ background-image:url('https://images.unsplash.com/photo-1450101499163-c8848c66ca
     font-size:12px;
     color:#fff !important;
 }
+/* ===================================
+   BUSINESS PAGE MOBILE RESPONSIVE
+   =================================== */
+
+@media screen and (max-width: 992px) {
+
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  /* HERO */
+
+  .business-hero {
+    min-height: 100vh;
+  }
+
+  .business-hero-content {
+    left: 25px !important;
+    right: 25px !important;
+    max-width: calc(100% - 50px) !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    padding-left: 0 !important;
+  }
+
+  .business-hero-content h1 {
+    font-size: 3rem !important;
+    line-height: 1.1 !important;
+  }
+
+  .business-hero-content p {
+    font-size: 1rem !important;
+    line-height: 1.8;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+  }
+
+  .hero-buttons a {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* SHOWCASE */
+
+  .showcase-section {
+    padding: 80px 25px;
+  }
+
+  .showcase-row,
+  .showcase-row.reverse {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 70px;
+    direction: ltr;
+  }
+
+  .showcase-image img {
+    height: 280px !important;
+  }
+
+  .showcase-content h2 {
+    font-size: 2.3rem !important;
+  }
+
+  .showcase-content p {
+    font-size: 0.95rem;
+  }
+
+  /* WORKFLOW */
+
+  .workflow-section {
+    padding: 80px 25px;
+  }
+
+  .workflow-heading h1 {
+    font-size: 2.6rem !important;
+  }
+
+  .workflow-box,
+  .workflow-box.reverse {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .workflow-image,
+  .workflow-text {
+    width: 100%;
+  }
+
+  .workflow-image {
+    height: 260px;
+  }
+
+  .workflow-text {
+    padding: 30px 25px;
+  }
+
+  .workflow-text h2 {
+    font-size: 2rem !important;
+  }
+
+  .workflow-text p {
+    font-size: 15px !important;
+  }
+
+  /* CULTURE */
+
+  .culture-section {
+    grid-template-columns: 1fr !important;
+    gap: 40px;
+    padding: 80px 25px;
+  }
+
+  .culture-left img {
+    height: 320px !important;
+  }
+
+  .culture-right h1 {
+    font-size: 2.6rem !important;
+  }
+
+  .culture-item {
+    padding: 18px 20px;
+  }
+
+  /* VALUES */
+
+  .values-section {
+    padding: 80px 25px;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+
+  .value-card {
+    padding: 30px 25px;
+  }
+
+  .value-card h2 {
+    font-size: 1.8rem !important;
+  }
+
+  .value-card p {
+    font-size: 0.95rem;
+  }
+
+  /* SECTION TITLES */
+
+  .business-heading h1,
+  .workflow-heading h1 {
+    font-size: 2.6rem !important;
+  }
+}
+
+/* EXTRA SMALL PHONES */
+
+@media screen and (max-width: 576px) {
+
+  .business-hero-content h1 {
+    font-size: 2.3rem !important;
+  }
+
+  .business-hero-content span {
+    font-size: 11px;
+    letter-spacing: 4px;
+  }
+
+  .showcase-content h2,
+  .workflow-text h2,
+  .culture-right h1,
+  .business-heading h1,
+  .workflow-heading h1 {
+    font-size: 2rem !important;
+  }
+
+  .showcase-image img,
+  .culture-left img {
+    height: 240px !important;
+  }
+}
+.business-hero-content h1{
+    font-size:7rem;
+}
+.business-hero-content h1{
+    font-size:5.5rem;
+}

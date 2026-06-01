@@ -1183,3 +1183,198 @@ button {
   display: block !important;
   z-index: 999999;
 }
+/* ==========================================
+   CAREERS PAGE MOBILE RESPONSIVE FIX
+   ========================================== */
+
+@media screen and (max-width: 992px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  /* HERO */
+
+  .career-hero {
+    min-height: 90vh;
+    padding: 0 20px;
+  }
+
+  .career-content {
+    width: 100% !important;
+    padding: 0 15px;
+  }
+
+  .career-content h1 {
+    font-size: 3rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .career-content p {
+    font-size: 1rem !important;
+    line-height: 1.8;
+  }
+
+  /* SECTIONS */
+
+  section {
+    padding: 80px 25px !important;
+  }
+
+  .section-title h1 {
+    font-size: 2.5rem !important;
+  }
+
+  /* BENEFITS */
+
+  .benefits-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+
+  .benefit-card {
+    padding: 25px;
+  }
+
+  /* INTERNSHIP CARDS */
+
+  .internship-grid {
+    grid-template-columns: 1fr !important;
+    gap: 25px;
+  }
+
+  .intern-card {
+    min-height: auto !important;
+    padding: 30px 25px;
+  }
+
+  .intern-card h2 {
+    font-size: 1.8rem;
+  }
+
+  .intern-card p {
+    line-height: 1.8;
+  }
+
+  /* TECH FORM */
+
+  .tech-form {
+    padding: 25px !important;
+    width: 100%;
+  }
+
+  .tech-form input,
+  .tech-form textarea {
+    width: 100%;
+  }
+
+  /* POPUP */
+
+  .popup-box {
+    width: 95% !important;
+    padding: 30px 20px;
+  }
+
+  /* ASSESSMENT */
+
+  .assessment-box {
+    padding: 60px 25px !important;
+  }
+
+  .assessment-box h1 {
+    font-size: 2.5rem !important;
+    line-height: 1.2;
+  }
+
+  .assessment-box p {
+    font-size: 1rem !important;
+    line-height: 1.8;
+  }
+
+  .assessment-box button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+/* =========================
+   MOBILE NAVBAR ONLY
+   ========================= */
+
+.menu-toggle {
+  display: none;
+}
+
+@media screen and (max-width: 992px) {
+  .navbar {
+    padding: 0 25px;
+    height: 90px;
+  }
+
+  .logo {
+    font-size: 1.8rem;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 30px;
+    color: #d4aa5a;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 90px;
+    right: -100%;
+    width: 280px;
+    height: calc(100vh - 90px);
+
+    background: #0a0a0a;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 20px;
+
+    gap: 0;
+
+    transition: 0.4s ease;
+
+    overflow-y: auto;
+
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+  }
+
+  .dropdown-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    display: none;
+
+    background: #111;
+
+    border: none;
+
+    min-width: 100%;
+  }
+
+  .dropdown.active .dropdown-menu {
+    display: block;
+  }
+}

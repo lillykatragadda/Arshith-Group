@@ -1125,7 +1125,7 @@ section {
   overflow: hidden;
 }
 .hero-content h1 {
-  font-size: 5rem;
+  font-size: 4.2rem;
   line-height: 1.1;
   color: #fff;
   max-width: 900px;
@@ -1202,4 +1202,83 @@ section {
 
 .hero-content h1 span {
   color: #d4aa5a;
+}
+.hero-content {
+  position: relative;
+  z-index: 5;
+  max-width: 850px;
+}
+
+.hero-top {
+  color: #d4aa5a;
+  letter-spacing: 8px;
+  font-size: 14px;
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+
+.hero-content h1 {
+  font-size: 4.2rem;
+  line-height: 1.05;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+}
+
+.hero-desc {
+  max-width: 700px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.15rem;
+  line-height: 1.9;
+  margin-bottom: 30px;
+}
+
+.hero-tagline {
+  display: inline-block;
+  padding-left: 18px;
+  border-left: 3px solid #d4aa5a;
+  color: #d4aa5a;
+  font-size: 15px;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.hero-buttons a:first-child {
+  background: #d4aa5a;
+  color: #111;
+  border-color: #d4aa5a;
+}
+
+.hero-buttons a:last-child {
+  background: transparent;
+  color: #fff;
+}
+@media (max-width: 992px) {
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero-desc {
+    font-size: 1rem;
+  }
+
+  .hero-tagline {
+    font-size: 13px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-buttons a {
+    width: 100%;
+    text-align: center;
+  }
 }
