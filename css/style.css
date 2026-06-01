@@ -1124,3 +1124,51 @@ section {
   width: 100%;
   overflow: hidden;
 }
+.hero-content h1 {
+  font-size: 5rem;
+  line-height: 1.1;
+  color: #fff;
+  max-width: 900px;
+  margin-bottom: 25px;
+}
+
+.hero-desc {
+  max-width: 700px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.15rem;
+  line-height: 1.9;
+  margin-bottom: 35px;
+}
+
+.hero-highlights {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 40px;
+}
+
+.highlight-item span {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #d4aa5a;
+}
+
+.highlight-item p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  margin-top: 5px;
+}
+@media (max-width: 992px) {
+  .hero-highlights {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .highlight-item span {
+    font-size: 1.5rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+}
