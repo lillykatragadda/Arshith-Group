@@ -1172,3 +1172,34 @@ section {
     font-size: 2.5rem;
   }
 }
+/* HERO TEXT VISIBILITY FIX */
+
+.hero-content h1 {
+  color: #ffffff !important;
+  text-shadow:
+    0 0 15px rgba(255, 255, 255, 0.25),
+    0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+.hero-desc {
+  color: rgba(255, 255, 255, 0.9) !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.hero-top {
+  color: #d4aa5a !important;
+  font-weight: 600;
+  letter-spacing: 8px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+}
+.hero-content h1 {
+  color: #fff;
+}
+
+.hero-content h1 span {
+  color: #d4aa5a;
+}
