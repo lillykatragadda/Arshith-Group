@@ -567,3 +567,55 @@ EMPLOYEE CORNER MOBILE RESPONSIVE
     margin: 8px 0;
   }
 }
+.close-menu {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .close-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    width: 100%;
+    padding-bottom: 20px;
+
+    color: #d4aa5a;
+    font-size: 30px;
+    cursor: pointer;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 15px;
+  }
+
+  .close-menu:hover {
+    color: #fff;
+  }
+}
+/* MOBILE NAVBAR DROPDOWN FIX */
+
+@media (max-width: 992px) {
+  .career-menu {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .career-menu a {
+    flex: 1;
+  }
+
+  .dropdown-toggle {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    font-size: 14px;
+  }
+
+  .dropdown-toggle i {
+    display: block;
+  }
+}

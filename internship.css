@@ -2168,3 +2168,45 @@ background-position:center;
     font-size:1.3rem;
   }
 }
+.close-menu{
+  display:none;
+}
+
+@media (max-width:992px){
+
+  .close-menu{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+
+    width:100%;
+    padding-bottom:20px;
+
+    color:#d4aa5a;
+    font-size:30px;
+    cursor:pointer;
+
+    border-bottom:1px solid rgba(255,255,255,0.1);
+    margin-bottom:15px;
+  }
+
+  .close-menu:hover{
+    color:#fff;
+  }
+}
+/* FIX MOBILE NAVBAR ICONS */
+
+.menu-toggle i,
+.close-menu i,
+.dropdown-toggle i {
+  font-family: "Font Awesome 6 Free" !important;
+  font-weight: 900 !important;
+  display: inline-block;
+}
+
+.fa-bars,
+.fa-xmark,
+.fa-chevron-down {
+  font-family: "Font Awesome 6 Free" !important;
+  font-weight: 900 !important;
+}

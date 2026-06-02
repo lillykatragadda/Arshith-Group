@@ -109,3 +109,10 @@ document.querySelectorAll(".dropdown-toggle").forEach((toggle) => {
     toggle.closest(".dropdown").classList.toggle("active");
   });
 });
+const closeMenu = document.querySelector(".close-menu");
+
+if (closeMenu && navLinks) {
+  closeMenu.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+  });
+}
