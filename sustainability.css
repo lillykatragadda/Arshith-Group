@@ -1115,3 +1115,34 @@ body {
     transform: none !important;
   }
 }
+/* ===== FUTURE SECTION MOBILE FIX ===== */
+
+@media (max-width: 768px) {
+  .future-section {
+    padding: 100px 20px !important;
+    overflow: hidden;
+  }
+
+  .future-content {
+    max-width: 100% !important;
+    text-align: left;
+  }
+
+  .future-content h2 {
+    font-size: 3rem !important;
+    line-height: 1.1 !important;
+    word-break: break-word;
+    margin-bottom: 25px;
+  }
+
+  .future-content p {
+    font-size: 1.1rem !important;
+    line-height: 1.8 !important;
+    max-width: 100%;
+  }
+
+  .future-content button {
+    width: 100%;
+    max-width: 260px;
+  }
+}
